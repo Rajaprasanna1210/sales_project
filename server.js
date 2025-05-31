@@ -25,7 +25,7 @@ app.use('/api/sales', salesRoutes);
 
   app.post('/api/load-sales', async (req, res) => {
     try {
-      const result = await loadCSV('path/to/sales.csv', db); // replace with actual file path
+      const result = await loadCSV('uploads/sales.csv', db); // replace with actual file path
       res.json({ message: result });
     } catch (error) {
       res.status(500).json({ error: 'Failed to load CSV data' });
